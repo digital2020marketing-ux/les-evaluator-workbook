@@ -1,0 +1,6 @@
+{
+  "name": "Les Evaluator Workbook",
+  "description": "Evaluasi efektivitas les anak secara rasional dan berbasis data untuk memastikan anak paham dan bertumbuh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

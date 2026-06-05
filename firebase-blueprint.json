@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "UserProgress": {
+      "title": "User Progress",
+      "description": "Stores user drafts, worksheets data and diagnostic history",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "description": "The unique user identifier"
+        },
+        "childName": {
+          "type": "string",
+          "description": "Name of the child"
+        },
+        "worksheets": {
+          "type": "object",
+          "description": "Draft data for all worksheets"
+        },
+        "history": {
+          "type": "array",
+          "description": "Historical diagnostic records list"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of last update"
+        }
+      },
+      "required": ["userId", "childName"]
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "UserProgress",
+      "description": "User specific progress and evaluation records"
+    }
+  }
+}
